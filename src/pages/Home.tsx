@@ -1,15 +1,21 @@
-import useArtworks from "../hooks/useArtworks";
 import ArtworkGrid from "../components/ArtworkGrid/ArtworkGrid";
 import Spinner from "../components/Spinner/Spinner";
+import useArtworks from "../hooks/useArtworks";
 
 export const Home = () => {
-  const { artworks, isLoading } = useArtworks();
+  const { artworks, fetchNextPage, hasNextPage, isLoading } = useArtworks();
 
   if (isLoading || !artworks) {
     return <Spinner />;
   }
 
-  return <ArtworkGrid artworks={artworks} />;
+  return (
+    <ArtworkGrid
+      artworks={artworks}
+      hasMoreArtworks={hasNextPage ?? false}
+      fetchNextPage={fetchNextPage}
+    />
+  );
 };
 
 export default Home;

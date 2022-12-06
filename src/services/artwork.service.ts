@@ -9,12 +9,13 @@ export const getArtworks = async (): Promise<PaginatedResult<ApiArtwork[]>> => {
   return res.data;
 };
 
-export const getArtworksWithPagination = (
+export const getArtworksWithPagination = async (
   page: number,
-  limit: number = 20
+  limit?: number
 ): Promise<PaginatedResult<ApiArtwork[]>> => {
-  const urlWithParams = `${baseUrl}?page=${page}&limit=${limit}`;
-  return axios.get(urlWithParams);
+  const urlWithParams = `${baseUrl}?page=${page}&limit=${limit ?? 20}`;
+  const res = await axios.get(urlWithParams);
+  return res.data;
 };
 
 export const getArtworkById = async (
