@@ -1,8 +1,8 @@
 import { FC } from "react";
-import styled from "styled-components";
 import { Artwork } from "../../models/Artwork";
 import { Routes } from "../../utils/routes.utils";
 import Card from "../Card/Card";
+import { ArtworkGridStyled } from "./styled-components/styled-components";
 
 interface Props {
   artworks: Artwork[];
@@ -29,13 +29,5 @@ const ArtworkGrid: FC<Props> = ({ artworks }) => {
     </ArtworkGridStyled>
   );
 };
-
-const ArtworkGridStyled = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 6rem;
-`;
 
 export default ArtworkGrid;

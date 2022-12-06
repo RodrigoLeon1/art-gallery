@@ -1,12 +1,22 @@
 import { useParams } from "react-router-dom";
-import styled from "styled-components";
-import useArtworkItem from "../hooks/useArtworkItem";
-import { Button } from "../styled-components/styled-components";
-import { Routes } from "../utils/routes.utils";
+import Spinner from "../../components/Spinner/Spinner";
+import useArtworkItem from "../../hooks/useArtworkItem";
+import { Button } from "../../styled-components/styled-components";
+import { Routes } from "../../utils/routes.utils";
+import {
+  TwoColumns,
+  Image,
+  Title,
+  Span,
+} from "./styled-components/styled-components";
 
 const ArtworkItem = () => {
   const { artworkId } = useParams();
-  const { artwork, isLoading, isError } = useArtworkItem(Number(artworkId));
+  const { artwork, isLoading } = useArtworkItem(Number(artworkId));
+
+  if (isLoading || !artwork) {
+    return <Spinner />;
+  }
 
   return (
     <>
@@ -36,28 +46,3 @@ const ArtworkItem = () => {
 };
 
 export default ArtworkItem;
-
-const TwoColumns = styled.div`
-  margin-top: 1rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-
-  @media screen and (max-width: 992px) {
-    grid-template-columns: 1fr;
-  }
-`;
-
-const Image = styled.img`
-  width: 100%;
-  height: 100%;
-`;
-
-const Title = styled.h1`
-  margin-top: 1rem;
-  font-size: 5rem;
-  line-height: 120%;
-`;
-
-const Span = styled.span`
-  font-size: 15px;
-`;

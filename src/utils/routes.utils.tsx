@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import ArtworkItem from "../pages/ArtworkItem";
+import ArtworkItem from "../pages/ArtworkItem/ArtworkItem";
 import Error from "../pages/Error";
 import Home from "../pages/Home";
 

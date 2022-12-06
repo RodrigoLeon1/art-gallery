@@ -1,11 +1,12 @@
 import useArtworks from "../hooks/useArtworks";
 import ArtworkGrid from "../components/ArtworkGrid/ArtworkGrid";
+import Spinner from "../components/Spinner/Spinner";
 
 export const Home = () => {
-  const { artworks, isError, isLoading } = useArtworks();
+  const { artworks, isLoading } = useArtworks();
 
-  if (isLoading || isError || !artworks) {
-    return <>Loading...</>;
+  if (isLoading || !artworks) {
+    return <Spinner />;
   }
 
   return <ArtworkGrid artworks={artworks} />;
