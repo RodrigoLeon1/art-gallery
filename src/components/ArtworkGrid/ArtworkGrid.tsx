@@ -5,6 +5,7 @@ import Card from '../Card/Card';
 import { ArtworkGridStyled } from './styled-components/styled-components';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import Spinner from '../Spinner/Spinner';
+import { getImageUrl } from '../../utils/image.utils';
 
 interface Props {
   artworks: Artwork[];
@@ -29,7 +30,8 @@ const ArtworkGrid: FC<Props> = ({ artworks, fetchNextPage, hasMoreArtworks }) =>
             <Card
               key={artwork.id}
               title={artwork.title}
-              image={artwork.image}
+              imageUrl={getImageUrl(artwork.image.id)}
+              imageAltText={artwork.image.altText}
               type={artwork.type}
               to={`${Routes.ARTWORK}/${artwork.id}`}
             />

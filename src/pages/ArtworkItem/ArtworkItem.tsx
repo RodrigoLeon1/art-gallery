@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom';
 import Spinner from '../../components/Spinner/Spinner';
 import useArtworkItem from '../../hooks/useArtworkItem';
 import { Button } from '../../styled-components/styled-components';
+import { getImageUrl } from '../../utils/image.utils';
 import { Routes } from '../../utils/routes.utils';
 import { TwoColumns, Image, Title, Span } from './styled-components/styled-components';
 
@@ -19,7 +20,7 @@ const ArtworkItem = () => {
 
       <TwoColumns>
         <figure style={{ marginLeft: 0 }}>
-          <Image src={artwork?.image.src} alt={artwork?.image.altText} />
+          <Image src={getImageUrl(artwork.image.id)} alt={artwork?.image.altText} />
         </figure>
 
         <div>

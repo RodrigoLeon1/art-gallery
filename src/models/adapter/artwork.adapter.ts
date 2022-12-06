@@ -10,6 +10,7 @@ const artworkAdapter = (apiModel: ApiArtwork): Artwork => {
     year: apiModel.fiscal_year,
     dimension: apiModel.dimensions,
     image: {
+      id: apiModel.image_id,
       src: apiModel.thumbnail?.lqip,
       altText: apiModel.thumbnail?.alt_text,
     },
