@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const SpinnerStyled = styled.span`
   width: 48px;
@@ -8,7 +8,7 @@ export const SpinnerStyled = styled.span`
 
   &::after,
   &::before {
-    content: "";
+    content: '';
     width: 48px;
     height: 48px;
     border: 2px solid var(--color-gray);

@@ -1,7 +1,7 @@
-import { useRouteError } from "react-router-dom";
-import styled from "styled-components";
-import { Button } from "../styled-components/styled-components";
-import { Routes } from "../utils/routes.utils";
+import { useRouteError } from 'react-router-dom';
+import styled from 'styled-components';
+import { Button } from '../styled-components/styled-components';
+import { Routes } from '../utils/routes.utils';
 
 const ErrorStyled = styled.div`
   display: flex;
@@ -25,12 +25,8 @@ const Error = () => {
 
   return (
     <ErrorStyled>
-      <ErrorTitleStyled>
-        Oops! Sorry, an unexpected error has occurred.
-      </ErrorTitleStyled>
-      <ErrorSubtitleStyled>
-        {error.statusText || error.message}
-      </ErrorSubtitleStyled>
+      <ErrorTitleStyled>Oops! Sorry, an unexpected error has occurred.</ErrorTitleStyled>
+      <ErrorSubtitleStyled>{error.statusText || error.message}</ErrorSubtitleStyled>
 
       <Button to={Routes.HOME}>Back to home</Button>
     </ErrorStyled>

@@ -1,7 +1,7 @@
-import Layout from "./components/Layout/Layout";
-import { QueryClient, QueryClientProvider } from "react-query";
-import { RouterProvider } from "react-router-dom";
-import { appRouter } from "./utils/routes.utils";
+import Layout from './components/Layout/Layout';
+import { QueryClient, QueryClientProvider } from 'react-query';
+import { RouterProvider } from 'react-router-dom';
+import { appRouter } from './utils/routes.utils';
 
 const queryClient = new QueryClient();
 

@@ -1,14 +1,9 @@
-import { useParams } from "react-router-dom";
-import Spinner from "../../components/Spinner/Spinner";
-import useArtworkItem from "../../hooks/useArtworkItem";
-import { Button } from "../../styled-components/styled-components";
-import { Routes } from "../../utils/routes.utils";
-import {
-  TwoColumns,
-  Image,
-  Title,
-  Span,
-} from "./styled-components/styled-components";
+import { useParams } from 'react-router-dom';
+import Spinner from '../../components/Spinner/Spinner';
+import useArtworkItem from '../../hooks/useArtworkItem';
+import { Button } from '../../styled-components/styled-components';
+import { Routes } from '../../utils/routes.utils';
+import { TwoColumns, Image, Title, Span } from './styled-components/styled-components';
 
 const ArtworkItem = () => {
   const { artworkId } = useParams();
@@ -30,9 +25,7 @@ const ArtworkItem = () => {
         <div>
           {artwork?.title && <Title>{artwork.title}</Title>}
 
-          {artwork?.description && (
-            <Span dangerouslySetInnerHTML={{ __html: artwork.description }} />
-          )}
+          {artwork?.description && <Span dangerouslySetInnerHTML={{ __html: artwork.description }} />}
 
           <ul>
             {artwork?.year && <li>Year: {artwork.year}</li>}

@@ -1,5 +1,5 @@
-import { ApiArtwork } from "../api/ApiArtwork";
-import { Artwork } from "../Artwork";
+import { ApiArtwork } from '../api/ApiArtwork';
+import { Artwork } from '../Artwork';
 
 const artworkAdapter = (apiModel: ApiArtwork): Artwork => {
   return {

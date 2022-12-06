@@ -1,5 +1,5 @@
-import { Artist } from "./Artist";
-import { Image } from "./Image";
+import { Artist } from './Artist';
+import { Image } from './Image';
 
 export interface Artwork {
   id: number;

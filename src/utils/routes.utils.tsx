@@ -1,12 +1,12 @@
-import { createBrowserRouter } from "react-router-dom";
-import ArtworkItem from "../pages/ArtworkItem/ArtworkItem";
-import Error from "../pages/Error";
-import Home from "../pages/Home";
+import { createBrowserRouter } from 'react-router-dom';
+import ArtworkItem from '../pages/ArtworkItem/ArtworkItem';
+import Error from '../pages/Error';
+import Home from '../pages/Home';
 
 export enum Routes {
-  HOME = "/",
-  ARTWORK = "/artwork",
-  ARTWORK_ITEM = "/artwork/:artworkId",
+  HOME = '/',
+  ARTWORK = '/artwork',
+  ARTWORK_ITEM = '/artwork/:artworkId',
 }
 
 export const appRouter = createBrowserRouter([

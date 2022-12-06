@@ -1,6 +1,6 @@
-import { Span } from "../../styled-components/styled-components";
-import { HeaderStyled } from "./styled-components/styled-components";
-import logo from "../../assets/svg/logo.svg";
+import { Span } from '../../styled-components/styled-components';
+import { HeaderStyled } from './styled-components/styled-components';
+import logo from '../../assets/svg/logo.svg';
 
 const Header = () => {
   return (

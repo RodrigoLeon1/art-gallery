@@ -1,11 +1,6 @@
-import { FC } from "react";
-import { Image } from "../../models/Image";
-import {
-  CardImageStyled,
-  CardStyled,
-  CardTypeStyled,
-  CardTitleStyled,
-} from "./styled-components/styled-components";
+import { FC } from 'react';
+import { Image } from '../../models/Image';
+import { CardImageStyled, CardStyled, CardTypeStyled, CardTitleStyled } from './styled-components/styled-components';
 
 interface Props {
   title: string;

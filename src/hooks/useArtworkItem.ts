@@ -1,6 +1,6 @@
-import { useQuery } from "react-query";
-import artworkAdapter from "../models/adapter/artwork.adapter";
-import { ARTWORK_QUERY_ID, getArtworkById } from "../services/artwork.service";
+import { useQuery } from 'react-query';
+import artworkAdapter from '../models/adapter/artwork.adapter';
+import { ARTWORK_QUERY_ID, getArtworkById } from '../services/artwork.service';
 
 const useArtworkItem = (artworkId: number) => {
   const queryKey = [ARTWORK_QUERY_ID.GET_ARTWORK_BY_ID, artworkId];
